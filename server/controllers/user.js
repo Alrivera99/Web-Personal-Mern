@@ -208,6 +208,9 @@ function activateUser(req, res){
 }
 
 
+function deleteUser(req, res){
+    console.log("Hola deelete");
+}
 module.exports={
     signUp, 
     signIn,
@@ -216,5 +219,6 @@ module.exports={
     uploadAvatar,
     getAvatar,
     updateUser,
-    activateUser
+    activateUser,
+    deleteUser
 }; 

@@ -90,6 +90,7 @@ export function getUsersApiActive(token, status){
                     Authorization: token
                 }
             };
+            
             return fetch(url, params)
                     .then(response => {
                         return response.json()
