@@ -4,6 +4,8 @@ import NoAvatar from '../../../../assets/img/png/no-avatar.png';
 import { EditOutlined, StopOutlined, DeleteOutlined, CheckOutlined } from '@ant-design/icons';
 import Modal from '../../../Modal';
 import EditUserForm from "../EditUserForm";
+import AddUserForm from "../AddUserForm"
+
 import { activateUserApi, getAvatarApi, deleteUserApi } from "../../../../Api/user"
 
 import './ListUsers.scss';
@@ -22,9 +24,7 @@ export default function ListUsers(props) {
         setIsVisibleModal(true);
         setModalTitle("Creando un nuevo usuario");
         setModalContent(
-            <div>
-                <h1>Creacion de usuario</h1>
-            </div>
+            <AddUserForm setIsVisibleModal={setIsVisibleModal} setReloadUsers={setReloadUsers}/>
         )
     }
 
